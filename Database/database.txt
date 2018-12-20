@@ -1,0 +1,40 @@
+1- Login & Welcome Page:
+
+Customer_ID (Primary Key)					(Welcome Page)
+Password
+Card-No
+PIN no
+Username
+aadhar number
+email
+phone number
+account number
+account balance
+account type (Savings/Credit/Current)
+
+
+
+2- Beneficiary Table:			(Add Beneficiary Page, Begin Payment, Display Beneficiary)
+
+Username
+Nickname
+Customer_Account_Number (Composite Primary Key)
+Beneficiary_Account_Number (Composite Primary Key)
+Bank_Branch
+IFSC code
+OTP
+time_stamp
+
+3- Transaction 			(Detailed_Stmt Page)
+
+Transaction_ID (Primary Key)
+account number (Foreign Key)
+Dat
+eTrasaction_details
+amount
+DR/CR
+
+bank_branch_ifsc
+
+1- ifsc
+2- bank_branch

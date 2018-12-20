@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<script src = jquery.js></script>
+<script src = jqueryui/js/jquery-ui-1.8.16.custom.min.js></script>
+
+<link rel=stylesheet type=text/css
+      href=jqueryui/css/smoothness/jquery-ui-1.8.16.custom.css />
+
+<div id="dialog" title="Window title">
+  <p> Content of the dialog box</p>
+</div>
+
+<script>
+
+$("div#dialog").dialog ({
+  show : "slide",
+  hide : "puff"
+});
+
+$("div#dialog").dialog ().prev ().find (".ui-dialog-titlebar-close").hide ();
+
+</script>

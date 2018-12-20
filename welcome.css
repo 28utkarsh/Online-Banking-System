@@ -1,0 +1,213 @@
+/* Reset */
+.nav,
+.nav a,
+.nav ul,
+.nav li,
+.nav div,
+.nav form,
+.nav input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+body {
+  padding-top: 40px;
+  margin: 0px;
+  border: 0px;
+}
+
+.nav a { text-decoration: none; }
+
+.nav li { list-style: none; }
+
+/*Then we will add some basic styles to the menu container
+and float the list items to the left in order to show them on the same line.*/
+
+/* Menu Container */
+.nav {
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+    display: inline-block;
+    position: relative;
+    cursor: default;
+    z-index: 500;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+/* Menu List */
+.nav > li {
+    display: block;
+    float: left;
+}
+
+/*Styling the menu link*/
+
+/*We will start with the common styles like padding, height, position, etc. Then we’ll
+ set the typography styles such as font size, color, text shadow, etc.
+ We’ll also set a background color and a left and right border.
+ To keep the styles transitions smooth we’ll add a CSS3 transition.
+ Note that we set the same property five times, this is required because this property
+ is not fully implemented in all browsers yet, and as this property is on testing, all
+ the different browsers use a prefix before the property. So if you want to support some
+ current and older browsers use this prefixes.*/
+
+ /* Menu Links */
+.nav > li > a {
+    position: relative;
+    display: block;
+    z-index: 510;
+    height: 55px;
+    padding: 5px 30px;
+    line-height: 54px;
+    
+
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+    text-shadow: 0 0 1px rgba(0,0,0,.35);
+
+    background: white;
+
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+/* Styling the logo*/
+.nav > li > img {
+  width: 180px;
+  height: 55px;
+}
+
+/*Styling the login button*/
+.nav > .login {
+  position: relative;
+  float: right;
+  padding-left: 120px;
+  top: 10px;
+  right: 30px;
+}
+
+.nav .login > button {
+  padding : 8px 35px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  background: white;
+  border-color: #d9ffcc;
+  border-radius: 10px;
+}
+
+.nav .login > button:hover {
+  background-color: #d9ffcc;
+}
+
+/*For the hover state we will only change the background color. To finish the menu links styling
+ we will add rounded corners to the first link using the :first-child pseudo selector and remove the left border.*/
+
+ .nav > li:hover > a { background: #d9ffcc; }
+
+ .nav > li:first-child > a {
+     border-radius: 3px 0 0 3px;
+     border-left: none;
+ }
+
+/* Mega Dropdowns*/
+
+/*This is one of the most important parts. We will start by setting the position to absolute,
+ width to 100%, display to block and the top and left values. Then we will hide the dropdowns
+  using the opacity, visibility and overflow properties. After that we will add a background color,
+  rounded corners and some transitions. The reason we will be using this three properties
+ to hide de dropdowns and not the display: none; is because if we use display: none; the transitions won’t work.*/
+
+ .nav > li > div {
+    position: absolute;
+    display: block;
+    width: 15%;
+    top: 80px;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+
+    background: #ffffff;
+    border-radius: 0 0 3px 3px;
+
+    -webkit-transition: all .3s ease .15s;
+    -moz-transition: all .3s ease .15s;
+    -o-transition: all .3s ease .15s;
+    -ms-transition: all .3s ease .15s;
+    transition: all .3s ease .15s;
+}
+
+/*To show the dropdowns on hover we need to set the opacity to 1
+ and the visibility and overflow properties to visible.*/
+
+ .nav > li:hover > div {
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+
+}
+
+/* Menu Content Styles */
+.nav .nav-column {
+    float: left;
+    width: 100%;
+    padding: 5px;
+    margin-left: 10px;
+    background-color: transparent;
+}
+
+.nav .nav-column h3 {
+    margin: 20px 0 10px 0;
+    line-height: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #372f2b;
+    text-transform: uppercase;
+}
+
+.nav .nav-column h3.orange { color: #ff722b; }
+
+.nav .nav-column li a {
+    display: block;
+    line-height: 25px;
+    padding: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    color: #888888;
+}
+
+.nav .nav-column li a:hover { color: #666666; }
+
+.customer_details {
+  position: absolute;
+  float: left;
+  padding-left: 20px;
+  font: bold;
+}
+
+.custoemr_details > .name {
+  position: relative;
+  float: left;
+}
+ 
+h5 {
+    margin-left: 3%;
+    font-size: 15px;
+}

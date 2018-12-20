@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<link rel="stylesheet" href="login.css">
+
+<head>
+  <title>
+    Login
+  </title>
+</head>
+
+  <body background="money.gif" style = "background-repeat: no-repeat; background-size: 108%; background-position-x: -110px; background-position-y: -170px;">
+    <div class="login-nav">
+      <a href = 'index.html' ><img src="ghapla_logo.jpg" style = 'height: 5%; width: 12%;'></a>
+      <h3>Ghapla Bank | Net Banking</h3>
+    </div>
+    <div class="form">
+      <div class="head" class="signup">
+        <div onclick="swap(this);" class="login-tab" data-tab="login">
+          CUSTOMER ID
+        </div>
+        <div onclick="swap(this);" class="signup-tab" data-tab="signup">
+          DEBIT CARD NUMBER
+        </div>
+      </div>
+      <div class="body" id="form-body">
+        <div class="login">
+          <form class="form-row" action = "login.php" method = "POST">
+            <input type="text" placeholder="CUSTOMER ID" name="customer_id">
+            <input type="password" placeholder="PASSWORD" name="password">
+            <input type="submit" value="Login" class="submit">
+          </form>
+        </div>
+        <div class="debit-card">
+          <form class="form-row" action= "login.php" method = "POST">
+            <input type="text" placeholder="CARD NUMBER" name="card_no">
+            <input type="password" placeholder="PIN NUMBER" name="pin_no">
+            <input type="submit" value="Login" class="submit">
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function swap(referTo){
+        if(referTo.getAttribute("data-tab") == "login")
+        {
+          document.getElementById("form-body").classList.remove('active');
+          referTo.parentNode.classList.remove('debit-card');
+        }
+        else
+        {
+          document.getElementById("form-body").classList.add('active');
+          referTo.parentNode.classList.add('debit-card');
+        }
+      }
+    </script>
+</body>
+
+</html>
